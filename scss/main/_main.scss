@@ -1,0 +1,71 @@
+section{
+    width: 100%;
+    padding: 100px 0;
+    background-color: olive;
+    
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+
+        h1{
+            font: bold 22px/1 "arial";
+            color: #333;
+            margin-bottom: 50px;
+        }
+        .wrap{
+            width: 100%;
+//          &는 .wrap을 다시 쓴거랑 똑같음
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            article{
+                width: 280px;
+                float: left;
+                margin-right: 20px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:nth-of-type(2n){
+                    background-color: yellow;
+                }
+                &:hover{
+                    &:nth-of-type(2n){
+                        background-color: aqua;
+                    }
+                    .pic{
+                        background-color: yellow;
+                    }
+                }
+                .pic{
+                    width: 100%;
+                    height: 120px;
+                    background-color: #555;
+                    margin-bottom: 10px;
+                }
+                h2{
+                    font: bold 16px/1 "arial";
+                    color: #555;
+                }
+                p{
+                    font: 12px/1.3 "arial";
+                    color: #777;
+                    margin-bottom: 30px;
+                }
+                a{
+                    display: block;
+                    width: 120px;
+                    height: 30px;
+                    background-color: pink;
+                    font-size: 12px;
+                    line-height: 30px;
+                    font-family: arial;
+                    color: #fff;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
