@@ -1,0 +1,45 @@
+//mixin 이름
+@mixin clear{
+    &::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+//             여기에 넣은 애들은 불러왔을 때 변경할 수 있음
+@mixin button($wid:120px,$ht:30px,$fontSize:12px, $bgColor:pink, $fontColor:#fff) {
+    display: block;
+    width: $wid;
+    height: $ht;
+    background-color: $bgColor;
+    font-size: $fontSize;
+    line-height: $ht;
+    font-family: arial;
+    color: $fontColor;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@mixin p($fontColor:#777) {
+    font: 12px/1.3 "arial";
+    color: $fontColor;
+    margin-bottom: 30px;
+}
+
+@mixin pic($wid:100%, $ht:120px, $bgColor:#555) {
+    width: $wid;
+    height: $ht;
+    background-color: $bgColor;
+    margin-bottom: 10px;
+}
+@mixin article($wid:280px) {
+    width: $wid;
+    float: left;
+    margin-right: 20px;
+}
+
+@mixin h1($font: bold 22px/1 "arial") {
+    font: $font;
+    color: #333;
+    margin-bottom: 50px;
+}
